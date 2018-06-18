@@ -1,0 +1,23 @@
+{
+  "name": "postgres-bap",
+  "description": "",
+  "main": "postgres-bap.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blackeyetech/postgres-bap.git"
+  },
+  "keywords": ["besh", "bap", "datastore", "postgres"],
+  "author": "Black Eye Technology",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/blackeyetech/postgres-bap/issues"
+  },
+  "homepage": "https://github.com/blackeyetech/postgres-bap#readme",
+  "dependencies": {
+    "lodash.merge": "^4.6.1",
+    "pg": "^7.4.3"
+  }
+}
