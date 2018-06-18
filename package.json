@@ -1,5 +1,5 @@
 {
-  "name": "postgres-bap",
+  "name": "@besh/postgres-bap",
   "description": "",
   "main": "postgres-bap.js",
   "scripts": {
