@@ -58,6 +58,13 @@ class DataStorePostgresConn extends besh.DataStoreBapConn {
             // TODO: Improve error handling
             this.log.error("connId:%d '%s' happened for query (%j): %j", 
                            this._id, e, query, e);
+
+            if (e.code === "23505") {
+                throw new besh.DataStoreBapConnError(
+                    "Duplicate record exists!", 
+                    besh.DataStoreBapConnError.DUP_CODE, this)
+            }
+
             throw this.Error("Something wrong with your request!", e.code);
         });
 
@@ -219,6 +226,12 @@ class DataStorePostgresConn extends besh.DataStoreBapConn {
             // TODO: Improve error handling
             this.log.error("connId:%d '%s' happened for query (%j): %j", 
                            this._id, e, query, e);
+            if (e.code === "23505") {
+                throw new besh.DataStoreBapConnError(
+                    "Duplicate record exists!", 
+                    besh.DataStoreBapConnError.DUP_CODE, this)
+            }
+
             throw this.Error("Something wrong with your request!", e.code);
         });
 
